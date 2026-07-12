@@ -5,7 +5,7 @@ locals {
     for k1, v1 in var.log_analytics_clusters : {
       for k2, v2 in coalesce(v1.log_analytics_cluster_customer_managed_keys, {}) :
       "${k1}/${k2}" => merge(v2, {
-        log_analytics_cluster_id = module.log_analytics_clusters.log_analytics_clusters["${k1}"].id
+        log_analytics_cluster_id = module.log_analytics_clusters.log_analytics_clusters_id["${k1}"]
       })
     }
   ]...)
