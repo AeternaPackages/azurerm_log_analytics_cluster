@@ -1,4 +1,9 @@
 # --- azurerm_log_analytics_cluster ---
+output "log_analytics_clusters_id" {
+  description = "Map of id values across all log_analytics_clusters, keyed the same as var.log_analytics_clusters"
+  value       = module.log_analytics_clusters.log_analytics_clusters_id
+}
+
 output "log_analytics_clusters_cluster_id" {
   description = "Map of cluster_id values across all log_analytics_clusters, keyed the same as var.log_analytics_clusters"
   value       = module.log_analytics_clusters.log_analytics_clusters_cluster_id
@@ -35,6 +40,11 @@ output "log_analytics_clusters_tags" {
 }
 
 # --- azurerm_log_analytics_cluster_customer_managed_key ---
+output "log_analytics_cluster_customer_managed_keys_id" {
+  description = "Map of id values across all log_analytics_cluster_customer_managed_keys, keyed the same as var.log_analytics_cluster_customer_managed_keys"
+  value       = module.log_analytics_cluster_customer_managed_keys.log_analytics_cluster_customer_managed_keys_id
+}
+
 output "log_analytics_cluster_customer_managed_keys_key_vault_key_id" {
   description = "Map of key_vault_key_id values across all log_analytics_cluster_customer_managed_keys, keyed the same as var.log_analytics_cluster_customer_managed_keys"
   value       = module.log_analytics_cluster_customer_managed_keys.log_analytics_cluster_customer_managed_keys_key_vault_key_id
