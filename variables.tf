@@ -18,7 +18,7 @@ EOT
     location            = string
     name                = string
     resource_group_name = string
-    size_gb             = optional(number) # Default: 100
+    size_gb             = optional(number)
     tags                = optional(map(string))
     identity = object({
       identity_ids = optional(set(string))
