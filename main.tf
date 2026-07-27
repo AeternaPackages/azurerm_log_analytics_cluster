@@ -12,12 +12,12 @@ locals {
 }
 
 module "log_analytics_clusters" {
-  source                 = "git::https://github.com/AeternaModules/azurerm_log_analytics_cluster.git?ref=v4.80.0"
+  source                 = "git::https://github.com/AeternaModules/azurerm_log_analytics_cluster.git?ref=v4.81.0"
   log_analytics_clusters = local.log_analytics_clusters
 }
 
 module "log_analytics_cluster_customer_managed_keys" {
-  source                                      = "git::https://github.com/AeternaModules/azurerm_log_analytics_cluster_customer_managed_key.git?ref=v4.80.0"
+  source                                      = "git::https://github.com/AeternaModules/azurerm_log_analytics_cluster_customer_managed_key.git?ref=v4.81.0"
   log_analytics_cluster_customer_managed_keys = local.log_analytics_cluster_customer_managed_keys
   depends_on                                  = [module.log_analytics_clusters]
 }
